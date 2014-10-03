@@ -2,5 +2,5 @@
 SHELL=bash
 
 assert:
-	go get github.com/monochromegane/the_platinum_searcher/cmd/pt
-	test "level-1-ignore Makefile" == "$(shell pt ignore -l)"
+	@echo "Running pt:" $(shell which pt)
+	test "level-1-ignore Makefile" == "$(shell ./pt ignore -l)"
